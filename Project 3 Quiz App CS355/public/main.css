@@ -1,0 +1,321 @@
+ :root {
+      --bg-color: linear-gradient(to right, #2c31bad4, #2ebf91);
+      --card-bg: white;
+      --text-color: black;
+      --button-bg: #4c5b61;
+      --button-hover: #3b494f;
+      --link-color: #4c5b61;
+    }
+
+    body.dark-mode {
+      --bg-color: #3b3d54;
+      --card-bg: #2c2c3a;
+      --text-color: #f5f5f5;
+      --button-bg: #3b82f6;
+      --button-hover: #2563eb;
+      --link-color: #8ab4f8;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left a,
+.nav-center a,
+.nav-right button {
+  margin: 0 10px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#logout-btn {
+  background: transparent;
+  border: none;
+  color: var(--link-color);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#logout-btn:hover {
+  text-decoration: underline;
+  color: var(--button-hover);
+}
+    .toggle-theme {
+      all: unset;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-color);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 2px 4px;
+      margin-left: 20px;
+    }
+
+    .toggle-theme:hover {
+      text-decoration: underline;
+      color: var(--button-hover);
+    }
+
+    .emoji {
+      font-size: 12px;
+      position: relative;
+      top: 1px;
+    }
+
+    .home-container {
+      margin: auto;
+      margin-top: 80px;
+      background: var(--card-bg);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+      color: var(--text-color);
+    }
+
+    h1 {
+      margin: 0 0 15px;
+      font-size: 2.2em;
+    }
+
+    .fun-fact {
+      font-size: 0.9em;
+      margin-top: 5px;
+      color: #888;
+      font-style: italic;
+    }
+
+    input[type="text"],
+    select {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: var(--button-bg);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: var(--button-hover);
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      color: var(--link-color);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: var(--button-hover);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+
+    #greeting {
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    #logout-btn {
+      background: transparent;
+      border: none;
+      color: var(--link-color);
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 16px;
+    }
+
+    #logout-btn:hover {
+      text-decoration: underline;
+      color: var(--button-hover);
+    }
+
+    .auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #1e1e2f;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 24px;
+  font-size: 2em;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.auth-container input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #4e9af1;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #4e9af1;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: #367bd3;
+}
+
+.auth-container p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-container a {
+  color: #4e9af1;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+#signupForm input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#signupForm button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#signupForm button:hover {
+  background-color: var(--button-hover);
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 10px;
+}
+
+#loginForm input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#loginForm button {
+  background-color: var(--button-bg);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+  background-color: var(--button-hover);
+}
+
